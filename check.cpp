@@ -1,4 +1,4 @@
-#include <string>
+ï»¿#include <string>
 #include <iostream>
 #include <thread>
 #include <iomanip>
@@ -30,12 +30,12 @@ int getNumber() {
     int number;
 
     while (true) {
-        cout << "Ââåäèòå ÷èñëî: ";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 
         if (getValidNumber(number)) {
             return number;
         }
 
-        cout << "Äàþ âàì ïîñëåäíèé øàíñ îäóìàòüñÿ..." << endl;
+        cout << "Ð”Ð°ÑŽ Ð²Ð°Ð¼ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¹ ÑˆÐ°Ð½Ñ Ð¾Ð´ÑƒÐ¼Ð°Ñ‚ÑŒÑÑ..." << endl;
     }
 }

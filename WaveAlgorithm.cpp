@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 #include <math.h>
 #include "generate.h"
@@ -66,7 +66,7 @@ void waveAlgorithm(vector<vector<char>> maze, int size_of_maze,int user_number) 
         }
         step++;
         if (oldWave == wave && flag){
-            cout << "выхооооода нееет,ключ поверни и полетели" << endl;
+            cout << "РІС‹С…РѕРѕРѕРѕРѕРґР° РЅРµРµРµС‚,РєР»СЋС‡ РїРѕРІРµСЂРЅРё Рё РїРѕР»РµС‚РµР»Рё" << endl;
             flag = 0;
             return;
         }

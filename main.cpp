@@ -44,14 +44,14 @@ int main()
 			{
 			case 1:
 				SetColor(10);
-				cout << "Введите размер лабиринта(число должно быть нечётным)(5-101) " << endl;
+				cout << "Введите размер лабиринта(число должно быть нечётным)(5-99) " << endl;
 				ResetColor();
 				SetColor(9);
 				cout << "------------------------------------------------------------------" << endl;
 				ResetColor();
-				
 				size_of_maze = getNumber();
 				if (size_of_maze <= 99 && size_of_maze >= 5 && size_of_maze % 2 == 1) {
+					maze.clear();
 					maze.resize(size_of_maze, vector<char>(size_of_maze));
 					generateMaze(maze, size_of_maze);
 					flag1 = 1;
@@ -63,6 +63,7 @@ int main()
 					SetColor(9);
 					cout << "------------------------------------------------------------------" << endl;
 					ResetColor();
+					flag1 = 0;
 				}
 				break;
 			case 2:
@@ -96,6 +97,7 @@ int main()
 				break;
 			case 4:
 				flag1 = 0;
+				maze.clear();
 				InputFileMaze(maze, size_of_maze);
 				if (!size_of_maze) {
 					SetColor(4);

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <vector>
 #include <stack>
 #include <cstdlib>
@@ -27,7 +27,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
             if (i % 2 == 0 && j % 2 == 0) {
                 int random_direction = rand() % 4 + 1;
                 int shall_we_stop = 1;
-                if (random_direction == 1) { //вверх
+                if (random_direction == 1) { //РІРІРµСЂС…
                     for (int up = i; up > 0 && maze[up][j] != '#'; up--) {
                         if (up % 2 == 0 && up != i) {
                             shall_we_stop = rand() % 4;
@@ -40,7 +40,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
 
                     }
                 }
-                if (random_direction == 2) {  // вправо
+                if (random_direction == 2) {  // РІРїСЂР°РІРѕ
                     for (int right = j; right < size_of_maze - 1 && maze[i][right] != '#'; right++) {
                         if (right % 2 == 0 && right != j) {
                             shall_we_stop = rand() % 4;
@@ -52,7 +52,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
                             break;
                     }
                 }
-                if (random_direction == 3) {  // вниз
+                if (random_direction == 3) {  // РІРЅРёР·
                     for (int down = i; down < size_of_maze - 1 && maze[down][j] != '#'; down++) {
                         if (down % 2 == 0 && down != i) {
                             shall_we_stop = rand() % 4;
@@ -64,7 +64,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
                             break;
                     }
                 }
-                if (random_direction == 4) {  // влево
+                if (random_direction == 4) {  // РІР»РµРІРѕ
                     for (int left = j; left != 0 && maze[i][left] != '#'; left--) {
                         if (left % 2 == 0 && left != j) {
                             shall_we_stop = rand() % 4;
@@ -85,7 +85,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
 
     }
 
-    int which_side_enter = (rand() % 2); //0 слева, 1 снизу
+    int which_side_enter = (rand() % 2); //0 СЃР»РµРІР°, 1 СЃРЅРёР·Сѓ
     if (!which_side_enter) {
         maze[size_of_maze - 2][enter] = '/';
     }
@@ -99,7 +99,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
         exit = rand() % (size_of_maze);
     }
     if (which_side_enter) {
-        which_size_exit = 2; // 2 справа
+        which_size_exit = 2; // 2 СЃРїСЂР°РІР°
     }
     else
         which_size_exit = 3;
@@ -107,7 +107,7 @@ void generateMaze(vector<vector<char>>& maze, int size_of_maze)
         maze[exit][size_of_maze - 2] = '/';
     }
     else {
-        maze[1][exit] = '/'; //  слева
+        maze[1][exit] = '/'; //  СЃР»РµРІР°
     }
 }
 void printMaze(vector<vector<char>> maze,int size_of_maze)
@@ -125,7 +125,7 @@ void printFileMaze(vector<vector<char>> maze, int size_of_maze)
 {
     ofstream f1("maze.txt");
     if (!f1.is_open()) {
-        cout << "Файл не открылся!!!" << endl;
+        cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ!!!" << endl;
     }
     for (int i = 0; i < size_of_maze; i++) {
         f1 << "   ";
@@ -141,7 +141,7 @@ void printFileShortMaze(vector<vector<char>> maze, int size_of_maze)
 {
     ofstream f2("shortWay.txt");
     if (!f2.is_open()) {
-        cout << "Файл не открылся!!!" << endl;
+        cout << "Р¤Р°Р№Р» РЅРµ РѕС‚РєСЂС‹Р»СЃСЏ!!!" << endl;
     }
     for (int i = 0; i < size_of_maze; i++) {
         f2 << "   ";
@@ -157,7 +157,7 @@ void InputFileMaze(vector<vector<char>>& maze, int& size_of_maze) {
     ifstream inputMaze("inputMaze.txt");
     if (!inputMaze.is_open()) {
         SetColor(4);
-        cout << "Ошибка открытия файла для записи////" << endl << endl;
+        cout << "РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р° РґР»СЏ Р·Р°РїРёСЃРё////" << endl << endl;
         ResetColor();
         return;
     }
