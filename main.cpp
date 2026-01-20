@@ -24,7 +24,7 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	SetColor(10);
-	cout << "Добро пожаловать в меню лабиринта:" << endl << endl;
+	cout << "Добро пожаловать в меню лабринта:" << endl << endl;
 	ResetColor();
 	SetColor(9);
 	cout << "------------------------------------------------------------------" << endl;
